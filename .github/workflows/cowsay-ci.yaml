@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD}}
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/Lelly2005/entrytracker:latest .
+        run: docker build -t ghcr.io/lelly2005/entrytracker:latest .
 
       - name: Start full environment (E2E) with docker-compose
         run: |
@@ -51,4 +51,4 @@ jobs:
           docker compose down
 
       - name: Push Docker image to GHCR
-        run: docker push ghcr.io/Lelly2005/entrytracker:latest
+        run: docker push ghcr.io/lelly2005/entrytracker:latest
