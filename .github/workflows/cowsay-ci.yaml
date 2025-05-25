@@ -38,7 +38,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${ github.actor }}
-          password: ${{ secrets.DOCKER_PASSWORD}}
+          password: ${{ secrets.GHCR_TOKEN}}
           logout:  true
       - name: Build Docker image
         run: docker build -t ghcr.io/lelly2005/entrytracker:latest .
